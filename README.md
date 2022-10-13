@@ -1,5 +1,5 @@
-#Furkot V2
+# Furkot V2
 
-##Pet Project
+## Pet Project
 
 Transfering landig Page of restaurant Cafe Furkot to React.js
