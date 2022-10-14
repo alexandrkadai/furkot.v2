@@ -1,0 +1,188 @@
+.icon-menu__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.icon-menu {
+  display: block;
+  z-index: 11;
+  position: fixed;
+  top: 35px;
+  right: 25px;
+  width: 50px;
+  height: 3px;
+  background: black;
+  box-shadow: 2px 2px 2px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.icon-menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  transform: translateY(16px);
+  background: black;
+  box-shadow: 2px 2px 2px;
+  z-index: 12;
+}
+
+.icon-menu::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  transform: translateY(-16px);
+  background: black;
+  box-shadow: 2px 2px 2px;
+  z-index: 12;
+}
+.icon-menu__container.open .icon-menu {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.icon-menu__container.open .icon-menu::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.icon-menu__container.open .icon-menu::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.first-sec {
+  height: auto;
+  align-content: center;
+}
+
+.head {
+  width: 100%;
+}
+
+.logo {
+  margin: 50px auto 0 auto;
+  height: 75px;
+  width: 200px;
+}
+
+.navig {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  font-size: var(--normal-font);
+  background-color: rgba(248, 255, 214, 0.9);
+  display: flex; /* DISPLAY MENU */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: -100%;
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+}
+
+.navig ul li {
+  display: block;
+  margin-top: 20px;
+  border: 2px solid black;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 black;
+}
+.navi-separator {
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 50px;
+  transform: rotate(45deg);
+  background-color: black;
+}
+.soc-wrapper {
+  margin-top: 25px;
+}
+
+.soc-wrapper li {
+  padding-top: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: var(--c-accdd);
+}
+
+@media screen and (min-width: 1022px) {
+  /* First Sectoion Nav & Header*/
+  .icon-menu {
+    display: none;
+  }
+
+  .logo {
+    margin: 40px auto 0 auto;
+    height: 50px;
+    width: 125px;
+  }
+
+  .navig {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    left: 0;
+  }
+
+  .navig ul li {
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 black;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  .navig-main {
+    text-align: center;
+  }
+
+  .navi-separator {
+    display: none;
+  }
+
+  .soc-wrapper {
+    margin-top: 0px;
+  }
+
+  .soc-wrapper:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(-45deg);
+    right: 5px;
+  }
+
+  .soc-wrapper li {
+    text-transform: uppercase;
+    padding-top: 5px;
+    color: var(--c-accdd);
+    display: inline-block;
+  }
+}

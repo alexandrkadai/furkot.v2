@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+:root {
+  /* Colors*/
+  --c-first: #f8ffd6;
+  /*--c-first:#fcffeb;*/
+  --c-accent: #bc4b51;
+  --c-accdark: #214e34;
+  --c-accdd: #3c1518;
+
+  /* Typography and fonts */
+  --header-height: 3rem;
+  --body-font: 'Cabin Condensed', sans-serif;
+  --notable-font: 'Notable', sans-serif;
+  --h1-font: 1.5rem;
+  --h2-font: 1.25rem;
+  --h3-font: 1.125rem;
+  --big-font: 2.5rem;
+  --normal-font: 0.938rem;
+  --smal-font: 0.812rem;
+  --smallest-font: 0.75rem;
+
+  /* Font wiegth*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*Margins*/
+  --mg1: 0.5rem;
+  --mg2: 1rem;
+  --mg3: 1.5rem;
+  --mg4: 2rem;
+  --mg5: 2.5rem;
+  --mg6: 3rem;
+
+  /*Z index*/
+  --z-normal: 1;
+  --z-tootip: 10;
+  --z-fix: 100;
+}
+
+/* Base */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-size: var(--normal-font);
+  font-family: var(--body-font);
+  background-image: url('/asset/img/background.png');
+  font-weight: var(--font-medium);
+  line-height: 1.6;
+  color: var(--c-accdd);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
