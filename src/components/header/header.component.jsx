@@ -1,9 +1,28 @@
+import { useState } from 'react';
 import './header.styles.scss';
 
 const Header = () => {
+  const { isOpen, setisOpen } = useState(false);
+
+  const menuHandler = () => {
+    const x = document.querySelector('.icon-menu__container');
+    const y = document.querySelector('.navig');
+
+    if (!isOpen) {
+      x.classList.add('open');
+      y.style.left = '0';
+      setisOpen(true);
+    }
+
+    if (isOpen) {
+      x.classList.remove('open');
+      y.style.left = '-100%';
+      setisOpen(false);
+    }
+  };
   return (
     <div>
-      <div className="icon-menu__container">
+      <div onClick={menuHandler} className="icon-menu__container">
         <span className="icon-menu"></span>
       </div>
       <header className="head">
