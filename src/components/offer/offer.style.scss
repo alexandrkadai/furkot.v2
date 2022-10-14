@@ -1,0 +1,167 @@
+.offer {
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.offer-title {
+  margin-top: 100px;
+  font-size: 40px;
+  color: var(--c-accent);
+  text-transform: uppercase;
+}
+
+.offer-title span {
+  color: black;
+}
+
+.offer-design {
+  display: none;
+}
+
+.offer-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+.offer-card {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: var(--smal-font);
+  text-align: center;
+  border: 2px solid black;
+  height: auto;
+  width: 280px;
+  box-shadow: 10px 10px 0 black;
+  background-color: #e9ebde;
+
+  &__title {
+    margin-top: 40px;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+  }
+  &__subtitle {
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+  img {
+    margin: 30px auto 0 auto;
+    height: 140px;
+    width: 140px;
+    border: 3px solid var(--c-accdark);
+  }
+}
+.offer-card p {
+  margin-top: 20px;
+}
+//TABLET MODE -----------------
+@media screen and (min-width: 768px) {
+  .offer-title {
+    font-size: 90px;
+  }
+
+  .offer-design {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1100px;
+    width: 100%;
+    height: 215px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+  }
+
+  .offer-title span {
+    font-size: 67px;
+  }
+
+  .offer-wrap {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .offer-card {
+    width: 200px;
+    height: 450px;
+  }
+
+  .menu-card h2 {
+    font-size: 200px;
+  }
+
+  .menu-card span {
+    width: 250px;
+    height: 50px;
+    font-size: 12px;
+    padding: 0px;
+    font-size: 30px;
+    margin-top: -80px;
+  }
+
+  .menu-design {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1721px;
+    width: 100%;
+    height: 60px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+  }
+}
+
+//DESKSTOP MODE ---------------
+@media screen and (min-width: 1022px) {
+  .offer {
+    margin: 0;
+    height: auto;
+  }
+
+  .offer-title {
+    font-size: 135px;
+  }
+
+  .offer-title span {
+    display: block;
+    margin-top: -50px;
+    font-size: 100px;
+  }
+
+  .offer-wrap {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+  }
+
+  .offer-design {
+    display: block;
+    top: 1300px;
+  }
+
+  .offer-card {
+    height: auto;
+    width: 280px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    z-index: 1;
+
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle {
+      font-size: 25px;
+    }
+    img {
+      height: 200px;
+      width: 180px;
+      border: 3px solid black;
+    }
+  }
+}
