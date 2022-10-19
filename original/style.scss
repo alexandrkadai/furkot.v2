@@ -1,0 +1,1113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+:root {
+  /* Colors*/
+  --c-first: #f8ffd6;
+  /*--c-first:#fcffeb;*/
+  --c-accent: #bc4b51;
+  --c-accdark: #214e34;
+  --c-accdd: #3c1518;
+
+  /* Typography and fonts */
+  --header-height: 3rem;
+  --body-font: 'Cabin Condensed', sans-serif;
+  --notable-font: 'Notable', sans-serif;
+  --h1-font: 1.5rem;
+  --h2-font: 1.25rem;
+  --h3-font: 1.125rem;
+  --big-font: 2.5rem;
+  --normal-font: 0.938rem;
+  --smal-font: 0.812rem;
+  --smallest-font: 0.75rem;
+
+  /* Font wiegth*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*Margins*/
+  --mg1: 0.5rem;
+  --mg2: 1rem;
+  --mg3: 1.5rem;
+  --mg4: 2rem;
+  --mg5: 2.5rem;
+  --mg6: 3rem;
+
+  /*Z index*/
+  --z-normal: 1;
+  --z-tootip: 10;
+  --z-fix: 100;
+}
+
+/* Base */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-size: var(--normal-font);
+  font-family: var(--body-font);
+  background-image: url('/asset/img/background.png');
+  font-weight: var(--font-medium);
+  line-height: 1.6;
+  color: var(--c-accdd);
+}
+nav {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+/*----------------------------------------------------*/
+/* Header, Navigation First section*/
+#icon-menu__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#icon-menu {
+  display: block;
+  z-index: 11;
+  position: fixed;
+  top: 35px;
+  right: 25px;
+  width: 50px;
+  height: 3px;
+  background: black;
+  box-shadow: 2px 2px 2px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+#icon-menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  transform: translateY(16px);
+  background: black;
+  box-shadow: 2px 2px 2px;
+  z-index: 12;
+}
+
+#icon-menu::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  transform: translateY(-16px);
+  background: black;
+  box-shadow: 2px 2px 2px;
+  z-index: 12;
+}
+#icon-menu__container.open #icon-menu {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+#icon-menu__container.open #icon-menu::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+#icon-menu__container.open #icon-menu::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+#first-sec {
+  height: auto;
+  align-content: center;
+}
+
+#head {
+  width: 100%;
+}
+
+#logo {
+  margin: 50px auto 0 auto;
+  height: 75px;
+  width: 200px;
+}
+
+#navig {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  font-size: var(--normal-font);
+  background-color: rgba(248, 255, 214, 0.9);
+  display: flex; /* DISPLAY MENU */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: -100%;
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+}
+
+#navig ul li {
+  display: block;
+  margin-top: 20px;
+  border: 2px solid black;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 black;
+}
+#navi-separator {
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  height: 6px;
+  width: 50px;
+  transform: rotate(45deg);
+  background-color: black;
+}
+#soc-wrapper {
+  margin-top: 25px;
+}
+
+#soc-wrapper li {
+  padding-top: 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: var(--c-accdd);
+}
+
+#front-wrapper {
+  margin: 50px auto 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  height: 150px;
+}
+
+#front-text {
+  display: inline-block;
+  font-family: var(--notable-font);
+  letter-spacing: 5px;
+  width: 100%;
+  font-size: 30px;
+  color: black;
+  border-bottom: 4px solid var(--c-accent);
+  border-top: 4px solid var(--c-accent);
+}
+
+#text-second {
+  font-size: 25px;
+  color: var(--c-accent);
+  font-family: var(--notable-font);
+}
+
+#design-dekstop {
+  margin-right: 0;
+  z-index: 0;
+  position: absolute;
+  top: 440px;
+  width: 100%;
+  height: 65px;
+  display: block;
+  border-bottom: 4px solid var(--c-accent);
+  border-top: 4px solid var(--c-accent);
+}
+
+#design-mobile {
+  margin-right: 0;
+  z-index: 0;
+  position: absolute;
+  top: 590px;
+  width: 100%;
+  height: 65px;
+  display: block;
+  border-bottom: 4px solid var(--c-accent);
+  border-top: 4px solid var(--c-accent);
+}
+
+#photo-wraper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-text {
+  position: relative;
+  color: #bc4b51;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  font-size: 30px;
+  top: 100px;
+  left: 5px;
+}
+.card-wraper {
+  z-index: 2;
+  margin-left: auto;
+  flex-grow: 2;
+  flex-basis: 40%;
+}
+
+.card-wraper img {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Second Section -- Offer  */
+
+#offer {
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+
+#offer-title {
+  margin-top: 100px;
+  font-size: 40px;
+  color: var(--c-accent);
+  text-transform: uppercase;
+}
+
+#offer-title span {
+  color: black;
+}
+
+#offer-design {
+  display: none;
+}
+
+#offer-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+.offer-card {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: var(--smal-font);
+  text-align: center;
+  border: 2px solid black;
+  height: auto;
+  width: 280px;
+  box-shadow: 10px 10px 0 black;
+  background-color: #e9ebde;
+
+  &__title {
+    margin-top: 40px;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+  }
+  &__subtitle {
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+  img {
+    margin: 30px auto 0 auto;
+    height: 140px;
+    width: 140px;
+    border: 3px solid var(--c-accdark);
+  }
+}
+.offer-card p {
+  margin-top: 20px;
+}
+/*Menu Section -- Poznaj Nasze Meni */
+
+#menu {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#menu-wrap {
+  z-index: 10;
+}
+
+#menu-card h2 {
+  text-transform: uppercase;
+  font-size: 100px;
+  color: black;
+  display: block;
+}
+
+#menu-card span {
+  display: block;
+  width: 200px;
+  height: 45;
+  margin: -30px auto 0 auto;
+
+  position: relative;
+  background-color: var(--c-first);
+  padding: 5px;
+  text-transform: uppercase;
+  color: black;
+  font-size: var(--h1-font);
+  border: 5px solid black;
+  box-shadow: 5px 5px 0 black;
+}
+
+/* Zaobacz Nasze propozycji */
+#purpose {
+  width: 100%;
+  margin-top: 150px;
+}
+
+#purpose-design {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 1300px;
+  width: 100%;
+  height: 215px;
+  border-top: 4px solid var(--c-accent);
+  border-bottom: 4px solid var(--c-accent);
+}
+
+#purpose-wrap {
+  text-align: center;
+  width: 280px;
+  height: auto;
+  text-transform: uppercase;
+  background-color: #e9ebde;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  height: auto;
+  box-shadow: 10px 10px 0 black;
+}
+
+#purpose-text {
+  font-size: 36px;
+}
+
+#purpose-text1 {
+  font-size: 16px;
+}
+
+#purpose-text2 {
+  font-size: 24px;
+}
+
+/* Dla grup Section */
+#event {
+  margin-top: 150px;
+  height: auto;
+  color: black;
+}
+
+#event-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#event-card-1 {
+  width: 100%;
+  height: 50vh;
+  background-image: url('/asset/img/impreza.jpg');
+  background-position: center;
+  background-size: cover;
+  border: 4px solid black;
+}
+
+#event-card-2 {
+  width: 100%;
+  text-align: center;
+  margin-top: -50px;
+  align-items: center;
+  overflow: hidden;
+}
+
+#event-card-2 h2 {
+  font-size: var(--big-font);
+  text-transform: capitalize;
+}
+
+/*#red-line{
+    display: block;
+    width: 105%;
+    margin-left: 40px;
+    height: auto;
+    border: 2px solid red;
+}
+*/
+
+#event-card-2 p {
+  margin-top: 50px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--h1-font);
+}
+
+/* Dostawa Section*/
+#delivery {
+  height: auto;
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+#delivery-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-card {
+  width: 100%;
+  overflow: hidden;
+}
+
+#delivery-card-1 {
+  width: 100%;
+  margin-top: -75px;
+  color: black;
+  text-align: center;
+  z-index: 1;
+}
+
+#delivery-card-1 h2 {
+  font-size: var(--big-font);
+  text-transform: capitalize;
+}
+
+#delivery-card-1 p {
+  margin-top: 50px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--h1-font);
+}
+
+#delivery-card-2 {
+  width: 100%;
+  height: 50vh;
+  background-image: url('/asset/img/dostawa.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid black;
+}
+.event__letter {
+  color: #bc4b51;
+}
+/* Footer Map and Contacs  */
+footer {
+  height: auto;
+}
+
+#footer-wrap {
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column-reverse;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#real-map {
+  width: 100%;
+}
+
+#contacts {
+  text-align: center;
+  color: black;
+  width: 100%;
+}
+
+#contacs-design {
+  width: 350px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid var(--c-accent);
+  font-family: var(--notable-font);
+  padding-bottom: 30px;
+}
+
+#contacts span {
+  display: block;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+#contacs-addres {
+  font-size: 32px;
+  margin-top: 90px;
+}
+
+#contacs-number {
+  font-size: 32px;
+}
+
+#contacs-hours-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contacs-hours {
+  font-size: 28px;
+}
+
+#contacs-hours-wrap {
+  margin-top: 20px;
+}
+
+.contacs-hours:last-child {
+  margin-left: 20px;
+}
+
+/* Media queries Tablet mode */
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font: 2.25rem;
+    --h2-font: 1.5rem;
+    --h3-font: 1.25rem;
+    --big-font: 4.5rem;
+    --normal-font: 1rem;
+    --smal-font: 0.875rem;
+    --smallest-font: 0.813rem;
+  }
+
+  #front-text {
+    font-size: 80px;
+    letter-spacing: 1px;
+  }
+
+  #text-second {
+    display: block;
+    margin-top: -30px;
+    font-size: 30px;
+  }
+
+  #photo-wraper {
+    margin-top: 50px;
+    flex-wrap: nowrap;
+  }
+
+  #design-mobile {
+    display: none;
+  }
+
+  .card-wraper img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* OFFER SECTION*/
+  #offer-title {
+    font-size: 90px;
+  }
+
+  #offer-design {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1100px;
+    width: 100%;
+    height: 215px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+  }
+
+  #offer-title span {
+    font-size: 67px;
+  }
+
+  #offer-wrap {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .offer-card {
+    width: 200px;
+    height: 450px;
+  }
+
+  #menu-card h2 {
+    font-size: 200px;
+  }
+
+  #menu-card span {
+    width: 250px;
+    height: 50px;
+    font-size: 12px;
+    padding: 0px;
+    font-size: 30px;
+    margin-top: -80px;
+  }
+
+  #menu-design {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1721px;
+    width: 100%;
+    height: 60px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+  }
+
+  #purpose-design {
+    display: block;
+    top: 2060px;
+    height: 150px;
+  }
+
+  #purpose-wrap {
+    width: 445px;
+    height: 225px;
+  }
+
+  #purpose-text {
+    font-size: 85px;
+  }
+
+  #purpose-text1 {
+    font-size: 43px;
+    display: block;
+    margin-top: -40px;
+  }
+
+  #purpose-text2 {
+    font-size: 55px;
+    display: block;
+    margin-top: -50px;
+  }
+
+  /*  ENNNNNNDDDDDD TABLET MODE */
+}
+
+/* Media Query Desktop Mode*/
+@media screen and (min-width: 1022px) {
+  /* First Sectoion Nav & Header*/
+  #icon-menu {
+    display: none;
+  }
+
+  #logo {
+    margin: 40px auto 0 auto;
+    height: 50px;
+    width: 125px;
+  }
+
+  #navig {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    left: 0;
+  }
+
+  #navig ul li {
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 black;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  #navig-main {
+    text-align: center;
+  }
+
+  #navi-separator {
+    display: none;
+  }
+
+  #soc-wrapper {
+    margin-top: 0px;
+  }
+
+  #soc-wrapper:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(-45deg);
+    right: 5px;
+  }
+
+  #soc-wrapper li {
+    text-transform: uppercase;
+    padding-top: 5px;
+    color: var(--c-accdd);
+    display: inline-block;
+  }
+
+  #front-wrapper {
+    height: auto;
+  }
+
+  #front-text {
+    font-size: 100px;
+  }
+
+  .card-wraper {
+    flex-grow: auto;
+    flex-basis: auto;
+    margin: 0;
+    text-align: center;
+  }
+
+  .card-text {
+    position: absolute;
+    display: block;
+  }
+
+  .card-wraper img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #text-second {
+    display: block;
+    margin-top: -35px;
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+
+  /*#design-dekstop{
+    display:none;
+    margin-right: 0;
+    z-index: 0;
+    position: absolute;
+    bottom: -90px;
+    width: 100%;
+    height: 65px;
+    display: block;
+    border-bottom: 4px solid var(--c-accent);
+    border-top: 4px solid var(--c-accent);
+}
+*/
+
+  #design-dekstop {
+    top: 620px;
+  }
+
+  #design-mobile {
+    display: none;
+  }
+
+  #photo-wraper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-text {
+    position: relative;
+    color: #bc4b51;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+    top: 120px;
+    left: 30px;
+  }
+
+  .card-wraper img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /*Section Offer Desktop -- Second Section */
+  #offer {
+    margin: 0;
+    height: auto;
+  }
+
+  #offer-title {
+    font-size: 135px;
+  }
+
+  #offer-title span {
+    display: block;
+    margin-top: -50px;
+    font-size: 100px;
+  }
+
+  #offer-wrap {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+  }
+
+  #offer-design {
+    display: block;
+    top: 1300px;
+  }
+
+  .offer-card {
+    height: auto;
+    width: 280px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    z-index: 1;
+
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle {
+      font-size: 25px;
+    }
+    img {
+      height: 200px;
+      width: 180px;
+      border: 3px solid black;
+    }
+  }
+  /*Menu Section -- Poznaj Nasze Meni */
+
+  #menu {
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  #menu-design {
+    display: block;
+    top: 2050px;
+  }
+
+  #menu-card h2 {
+    font-size: 300px;
+  }
+
+  /* Zaobacz Nasze propozycji */
+  #purpose {
+    margin-bottom: 100px;
+  }
+
+  #purpose-design {
+    display: block;
+    top: 2620px;
+    height: 215px;
+  }
+
+  #purpose-wrap {
+    width: 750px;
+    z-index: 1;
+  }
+
+  #purpose-text {
+    font-size: 132px;
+  }
+
+  #purpose-text1 {
+    display: block;
+    font-size: 60px;
+    margin-top: -70px;
+  }
+
+  #purpose-text2 {
+    display: block;
+    font-size: 82px;
+    margin-top: -70px;
+  }
+
+  /* Dla grup Section */
+
+  #event {
+    height: 100vh;
+  }
+
+  #event-wrap {
+    flex-direction: row;
+  }
+
+  .event-card {
+    width: 100vh;
+    height: 100vh;
+  }
+
+  #event-card-1 {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #event-card-2 {
+    margin-top: 50px;
+  }
+
+  #event-card-2 h2 {
+    margin-top: 0px;
+    margin-right: 15%;
+  }
+
+  #red-line-event {
+    display: block;
+    width: 105%;
+    margin-left: 40px;
+    height: auto;
+    border: 4px solid var(--c-accent);
+  }
+
+  /*#event-card-2 p{
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--h1-font) ;
+}*/
+
+  /* Dostawa Section*/
+  #delivery {
+    height: 100vh;
+  }
+
+  #delivery-wrap {
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  .delivery-card {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #delivery-card-1 {
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  #delivery-card-1 h2 {
+    font-size: var(--big-font);
+    margin-left: 150px;
+    text-transform: capitalize;
+  }
+
+  #red-line-delivery {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    width: 105%;
+    height: auto;
+    border: 4px solid var(--c-accent);
+    right: 130px;
+  }
+
+  #delivery-card-1 p {
+    margin-top: 50px;
+    width: 450px;
+    display: block;
+  }
+
+  #delivery-card-2 {
+    height: 100vh;
+  }
+
+  /* Footer Map and Contacs  */
+  footer {
+    height: auto;
+  }
+
+  #footer-wrap {
+    flex-direction: row;
+  }
+
+  #contacs-addres {
+    font-size: 45px;
+  }
+
+  #contacs-design {
+    width: 450px;
+  }
+
+  #contacts img {
+    margin: 55px auto 0 auto;
+    width: 250px;
+    height: 150px;
+  }
+
+  #contacts span {
+    padding-bottom: 0px;
+  }
+
+  #contacs-number {
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .contacs-hours {
+    font-size: 36px;
+  }
+
+  /* Media End -------------------*/
+}
