@@ -2,4 +2,4 @@
 
 ## Pet Project
 
-Transfering landig Page of restaurant Cafe Furkot to React.js
+Transfering landing Page of restaurant Cafe Furkot to React.js
