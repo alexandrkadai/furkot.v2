@@ -1,0 +1,103 @@
+#purpose {
+  width: 100%;
+  margin-top: 150px;
+}
+
+#purpose-design {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 1300px;
+  width: 100%;
+  height: 215px;
+  border-top: 4px solid var(--c-accent);
+  border-bottom: 4px solid var(--c-accent);
+}
+
+#purpose-wrap {
+  text-align: center;
+  width: 280px;
+  height: auto;
+  text-transform: uppercase;
+  background-color: #e9ebde;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  height: auto;
+  box-shadow: 10px 10px 0 black;
+}
+
+#purpose-text {
+  font-size: 36px;
+}
+
+#purpose-text1 {
+  font-size: 16px;
+}
+
+#purpose-text2 {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  #purpose-design {
+    display: block;
+    top: 2060px;
+    height: 150px;
+  }
+
+  #purpose-wrap {
+    width: 445px;
+    height: 225px;
+  }
+
+  #purpose-text {
+    font-size: 85px;
+  }
+
+  #purpose-text1 {
+    font-size: 43px;
+    display: block;
+    margin-top: -40px;
+  }
+
+  #purpose-text2 {
+    font-size: 55px;
+    display: block;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (min-width: 1022px) {
+  #purpose {
+    margin-bottom: 100px;
+  }
+
+  #purpose-design {
+    display: block;
+    top: 2620px;
+    height: 215px;
+  }
+
+  #purpose-wrap {
+    width: 750px;
+    z-index: 1;
+  }
+
+  #purpose-text {
+    font-size: 132px;
+  }
+
+  #purpose-text1 {
+    display: block;
+    font-size: 60px;
+    margin-top: -70px;
+  }
+
+  #purpose-text2 {
+    display: block;
+    font-size: 82px;
+    margin-top: -70px;
+  }
+}

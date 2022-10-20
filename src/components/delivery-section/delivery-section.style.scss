@@ -1,0 +1,148 @@
+#delivery {
+  height: auto;
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+#delivery-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-card {
+  width: 100%;
+  overflow: hidden;
+}
+
+#delivery-card-1 {
+  width: 100%;
+  margin-top: -75px;
+  color: black;
+  text-align: center;
+  z-index: 1;
+}
+
+#delivery-card-1 h2 {
+  font-size: var(--big-font);
+  text-transform: capitalize;
+}
+
+#delivery-card-1 p {
+  margin-top: 50px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--h1-font);
+}
+
+#delivery-card-2 {
+  width: 100%;
+  height: 50vh;
+  background-image: url('/asset/img/dostawa.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid black;
+}
+.event__letter {
+  color: #bc4b51;
+}
+@media screen and (min-width: 1022px) {
+  #delivery {
+    height: 100vh;
+  }
+
+  #delivery-wrap {
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  .delivery-card {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #delivery-card-1 {
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  #delivery-card-1 h2 {
+    font-size: var(--big-font);
+    margin-left: 150px;
+    text-transform: capitalize;
+  }
+
+  #red-line-delivery {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    width: 105%;
+    height: auto;
+    border: 4px solid var(--c-accent);
+    right: 130px;
+  }
+
+  #delivery-card-1 p {
+    margin-top: 50px;
+    width: 450px;
+    display: block;
+  }
+
+  #delivery-card-2 {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1022px) {
+  #delivery {
+    height: 100vh;
+  }
+
+  #delivery-wrap {
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  .delivery-card {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #delivery-card-1 {
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  #delivery-card-1 h2 {
+    font-size: var(--big-font);
+    margin-left: 150px;
+    text-transform: capitalize;
+  }
+
+  #red-line-delivery {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    width: 105%;
+    height: auto;
+    border: 4px solid var(--c-accent);
+    right: 130px;
+  }
+
+  #delivery-card-1 p {
+    margin-top: 50px;
+    width: 450px;
+    display: block;
+  }
+
+  #delivery-card-2 {
+    height: 100vh;
+  }
+}
